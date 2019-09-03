@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="master">
+<body>
+<main layout:fragment="contenido">
+    <div class="col-12">
+        <h2>Editar producto </h2>
+        <form th:object="${producto}" th:action="@{/productos/editar/} + ${producto.id}" method="post">
+            <input type="hidden" th:field="*{id}">
+            <div class="form-group">
+                <label for="nombre">Nombre del producto</label>
+                <input autocomplete="off" autofocus th:field="*{nombre}" id="nombre"
+                       placeholder="Escribe el nombre del producto" type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{nombre}"></div>
+            </div>
+            <div class="form-group">
+                <label for="codigo">Código de barras</label>
+                <input autocomplete="off" th:field="*{codigo}" id="codigo" placeholder="Escribe el código del producto"
+                       type="text"
+                       class="form-control" th:classappend="${#fields.hasErrors('codigo')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{codigo}"></div>
+            </div>
+            <div class="form-group">
+                <label for="existencia">Existencia actual</label>
+                <input autocomplete="off" th:field="*{existencia}" id="existencia"
+                       placeholder="Cantidad actual del producto" type="number"
+                       class="form-control" th:classappend="${#fields.hasErrors('existencia')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{existencia}"></div>
+            </div>
+            <div class="form-group">
+                <label for="existencia">Precio</label>
+                <input autocomplete="off" th:field="*{precio}" id="precio" placeholder="Precio del producto"
+                       type="number"
+                       class="form-control" th:classappend="${#fields.hasErrors('precio')} ? 'is-invalid' : ''">
+                <div class="invalid-feedback" th:errors="*{precio}"></div>
+            </div>
+            <button class="btn btn-success" type="submit">Guardar</button>
+            &nbsp;<a class="btn btn-warning" th:href="@{/productos/mostrar}">Ver todos</a>
+        </form>
+    </div>
+</main>
+</body>
+</html>

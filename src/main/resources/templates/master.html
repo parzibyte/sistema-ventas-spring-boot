@@ -1,0 +1,25 @@
+<!doctype html>
+<!--
+    Programado por Luis Cabrera Benito
+  ____          _____               _ _           _
+ |  _ \        |  __ \             (_) |         | |
+ | |_) |_   _  | |__) |_ _ _ __ _____| |__  _   _| |_ ___
+ |  _ <| | | | |  ___/ _` | '__|_  / | '_ \| | | | __/ _ \
+ | |_) | |_| | | |  | (_| | |   / /| | |_) | |_| | ||  __/
+ |____/ \__, | |_|   \__,_|_|  /___|_|_.__/ \__, |\__\___|
+         __/ |                               __/ |
+        |___/                               |___/
+
+
+    Blog:       https://parzibyte.me/blog
+    Ayuda:      https://parzibyte.me/blog/contrataciones-ayuda/
+    Contacto:   https://parzibyte.me/blog/contacto/
+-->
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="layouts/encabezado :: encabezado"></head>
+<body>
+<nav th:replace="layouts/navbar :: navbar"></nav>
+<main layout:fragment="contenido" role="main" class="container"></main>
+<footer th:replace="layouts/pie :: pie"></footer>
+</body>
+</html>
