@@ -11,43 +11,45 @@
              class="alert">
         </div>
         <a class="btn btn-success mb-2" th:href="@{/vender/}">Agregar</a>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Fecha</th>
-                <th>Total</th>
-                <th>Productos</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="venta : ${ventas}">
-                <td th:text="${venta.fechaYHora}"></td>
-                <td th:text="${venta.total}"></td>
-                <td>
-                    <table class="table table-bordered">
-                        <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Código de barras</th>
-                            <th>Cantidad vendida</th>
-                            <th>Precio</th>
-                            <th>Total</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr th:each="producto : ${venta.productos}">
-                            <td th:text="${producto.nombre}"></td>
-                            <td th:text="${producto.codigo}"></td>
-                            <td th:text="${producto.cantidad}"></td>
-                            <td th:text="${producto.precio}"></td>
-                            <td th:text="${producto.total}"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Total</th>
+                    <th>Productos</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="venta : ${ventas}">
+                    <td th:text="${venta.fechaYHora}"></td>
+                    <td th:text="${venta.total}"></td>
+                    <td>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Código de barras</th>
+                                <th>Cantidad vendida</th>
+                                <th>Precio</th>
+                                <th>Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="producto : ${venta.productos}">
+                                <td th:text="${producto.nombre}"></td>
+                                <td th:text="${producto.codigo}"></td>
+                                <td th:text="${producto.cantidad}"></td>
+                                <td th:text="${producto.precio}"></td>
+                                <td th:text="${producto.total}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </main>
 </body>

@@ -28,35 +28,35 @@
                     class="fa fa-trash"></i>
             </a>
         </form>
-
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Código</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Total</th>
-                <th>Quitar de lista</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="producto, iterador : ${session.carrito}">
-                <td th:text="${producto.nombre}"></td>
-                <td th:text="${producto.codigo}"></td>
-                <td th:text="${producto.precio}"></td>
-                <td th:text="${producto.cantidad}"></td>
-                <td th:text="${producto.total}"></td>
-                <td>
-                    <form th:action="@{/vender/quitar/} + ${iterador.index}" method="post">
-                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Código</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Total</th>
+                    <th>Quitar de lista</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="producto, iterador : ${session.carrito}">
+                    <td th:text="${producto.nombre}"></td>
+                    <td th:text="${producto.codigo}"></td>
+                    <td th:text="${producto.precio}"></td>
+                    <td th:text="${producto.cantidad}"></td>
+                    <td th:text="${producto.total}"></td>
+                    <td>
+                        <form th:action="@{/vender/quitar/} + ${iterador.index}" method="post">
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </main>
 </body>
