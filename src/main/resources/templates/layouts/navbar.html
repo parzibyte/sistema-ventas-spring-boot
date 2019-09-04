@@ -1,12 +1,10 @@
 <nav th:fragment="navbar" xmlns:th="http://www.w3.org/1999/xhtml"
      class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" target="_blank" href="//parzibyte.me/blog">POS by Parzibyte</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#miNavbar" aria-controls="miNavbar"
-            aria-expanded="false" aria-label="Mostrar u ocultar menú">
+    <button class="navbar-toggler" type="button" id="botonMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="collapse navbar-collapse" id="miNavbar">
+    <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/vender/}">Vender</a>
