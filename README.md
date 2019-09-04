@@ -3,6 +3,9 @@
 # POS con Spring Boot
 ![Punto de venta con Spring Boot](https://parzibyte.me/blog/wp-content/uploads/2019/09/Punto-de-venta-con-Spring-Boot-MySQL-y-Bootstrap-4.gif)
 
+# Tutorial
+Aquí: https://parzibyte.me/blog/2019/09/04/sistema-ventas-spring-mvc-mysql-bootstrap/
+
 ## Descargar código del sistema de ventas Spring Boot y compilar
 
 Si quieres puedes clonar el repositorio, he usado gradle para todo así que puedes usar incluso el bloc de notas para programar.
