@@ -1,7 +1,7 @@
 package me.parzibyte.sistemaventasspringboot;
 
 public class ProductoParaVender extends Producto {
-    private Float cantidad, total;
+    private Float cantidad;
 
     public ProductoParaVender(String nombre, String codigo, Float precio, Float existencia, Integer id, Float cantidad) {
         super(nombre, codigo, precio, existencia, id);
@@ -11,16 +11,10 @@ public class ProductoParaVender extends Producto {
     public ProductoParaVender(String nombre, String codigo, Float precio, Float existencia, Float cantidad) {
         super(nombre, codigo, precio, existencia);
         this.cantidad = cantidad;
-        this.refrescarTotal();
-    }
-
-    public void refrescarTotal() {
-        this.total = this.cantidad * this.getPrecio();
     }
 
     public void aumentarCantidad() {
         this.cantidad++;
-        this.refrescarTotal();
     }
 
     public Float getCantidad() {
@@ -28,6 +22,6 @@ public class ProductoParaVender extends Producto {
     }
 
     public Float getTotal() {
-        return total;
+        return this.getPrecio() * this.cantidad;
     }
 }
