@@ -35,3 +35,9 @@ Más información sobre [Spring Boot y Gradle aquí](https://parzibyte.me/blog/2
 ## Tu propio application.properties para mi sistema de ventas con Spring Boot
 
 Si mi contraseña, usuario o configuración no son acorde a tus requisitos recuerda que siempre puedes crear un archivo llamado `application.properties` en el **mismo directorio** en donde está el jar, así, será tomado en cuenta ese archivo en lugar del mío.
+
+## Esquema de base de datos
+No es necesario proporcionar el esquema de la base de datos pues la migración se hace automáticamente al ejecutar el proyecto; sin embargo
+se puede encontrar un esquema en src/main/resources/
+
+Te aviso que probablemente cause algunos errores si la base de datos del proyecto no está limpia
